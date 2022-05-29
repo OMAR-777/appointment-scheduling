@@ -1,0 +1,4 @@
+"DefaultConnection": "Server=localhost;User=sa;Password=Docker@123;Database=AppointmentScheduler;Trusted_Connection=false;MultipleActiveResultSets=true"
+
+-----
+"DefaultConnection": "Data source=appointmentScheduling.db"

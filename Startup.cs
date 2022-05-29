@@ -31,7 +31,7 @@ namespace AppointmentScheduling
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>
-                (options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+                (options => options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
             services.AddControllersWithViews();
             services.AddTransient<IAppointmentService, AppointmentService>();
 
