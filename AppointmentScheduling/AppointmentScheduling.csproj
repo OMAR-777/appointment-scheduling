@@ -13,11 +13,29 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="Mailjet.Api" Version="2.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="5.0.16" />
   </ItemGroup>
 
   <ItemGroup>
     <None Remove="Microsoft.AspNetCore.Identity.EntityFrameworkCore" />
     <None Remove="Microsoft.EntityFrameworkCore.SqlServer" />
     <None Remove="Microsoft.EntityFrameworkCore.Tools" />
+    <None Remove="Models\ViewModels\" />
+    <None Remove="Views\Account\" />
+    <None Remove="services\" />
+    <None Remove="Views\Appointment\" />
+    <None Remove="Controllers\Api\" />
+    <None Remove="Mailjet.Api" />
+    <None Remove="Microsoft.AspNetCore.Identity.UI" />
+    <None Remove="DbInitializer\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\ViewModels\" />
+    <Folder Include="Views\Account\" />
+    <Folder Include="services\" />
+    <Folder Include="Views\Appointment\" />
+    <Folder Include="Controllers\Api\" />
+    <Folder Include="DbInitializer\" />
   </ItemGroup>
 </Project>
