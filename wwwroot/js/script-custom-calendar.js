@@ -93,14 +93,14 @@ function onShowModal(obj, isEventDetails) {
         $("#doctorId").val(obj.doctorId);
         $("#patientId").val(obj.patientId);
         $("#id").val(obj.id);
-        $("#lblPatientName").html(obj.patientName);
-        $("#lblDoctorName").html(obj.doctorName);
+        $("#lblPatientName").val(obj.patientName);
+        $("#lblDoctorName").val(obj.doctorName);
         if (obj.isDoctorApproved) {
-            $("#lblStatus").html("Approved");
+            $("#lblStatus").val("Approved");
             $("#btnConfirm").addClass("d-none");
             $("#btnSubmit").addClass("d-none");
         } else {
-            $("#lblStatus").html("Pending");
+            $("#lblStatus").val("Pending");
             $("#btnConfirm").removeClass("d-none");
             $("#btnSubmit").removeClass("d-none");
         }
