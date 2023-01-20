@@ -4,6 +4,7 @@ using Mailjet.Client;
 using Mailjet.Client.Resources;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Newtonsoft.Json.Linq;
+using dotenv.net;
 
 namespace AppointmentScheduling.Utility
 {
@@ -11,7 +12,8 @@ namespace AppointmentScheduling.Utility
     {
         public async Task SendEmailAsync(string email, string subject, string htmlMessage)
         {
-            MailjetClient client = new MailjetClient("***REMOVED***", "***REMOVED***")
+            var envVars = DotEnv.Read();
+            MailjetClient client = new MailjetClient(envVars["MAILJET_API_KEY"], envVars["MAILJET_API_SECRET"])
             {
 
             };
